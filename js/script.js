@@ -1,3 +1,4 @@
+"use strict"
 /*document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
     console.log('links:', links);
@@ -29,15 +30,15 @@ const titleClickHandler = function (event) {
 
 
     /* get 'href' attribute from the clicked link */
-    const articleSelector = ("href");
-    const href = clickedElement.getAttribute("href");
-    console.log(href);
-    
+    const articleSelector = clickedElement.getAttribute("href");
+
     /* find the correct article using the selector (value of 'href' attribute) */
-    const targetArticle = document.querySelector("href");
+    const targetArticle = document.querySelector(articleSelector);
     console.log(this);
     /* add class 'active' to the correct article */
-    href.classList.add("active");
+    
+    targetArticle.classList.add("active");
+
     
 }
 
