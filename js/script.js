@@ -1,7 +1,7 @@
-"use strict"
+'use strict';
 /*document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
-    console.log('links:', links);
+    console.log('links:', links)
   });*/
 const titleClickHandler = function (event) {
   event.preventDefault();
@@ -22,35 +22,27 @@ const titleClickHandler = function (event) {
 
 
   /* [DONE] remove class 'active' from all articles */
-  const activeArticles = document.querySelectorAll(".posts .active");
+  const activeArticles = document.querySelectorAll('.posts .active');
   for (let activeArticle of activeArticles) {
     activeArticle.classList.remove('active');
   }
 
-
-
   /* get 'href' attribute from the clicked link */
-  const articleSelector = clickedElement.getAttribute("href");
+  const articleSelector = clickedElement.getAttribute('href');
 
   /* find the correct article using the selector (value of 'href' attribute) */
   const targetArticle = document.querySelector(articleSelector);
   console.log(this);
   /* add class 'active' to the correct article */
 
-  targetArticle.classList.add("active");
-
-
-}
-
+  targetArticle.classList.add('active');
+};
 
 const links = document.querySelectorAll('.titles a');
 
 for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
-
-
-
 {
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
